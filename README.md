@@ -13,8 +13,6 @@ In this version of the ToDo list, the user will be getting four options:
 
 
 
-Exit from the app.
-
 - Create (add) a new task or adding a new ToDo in the ToDo List App.
 - See all the tasks or View all the ToDos that were added to the app.
 - Mark any ToDo from the list of ToDos.
