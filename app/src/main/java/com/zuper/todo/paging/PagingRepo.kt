@@ -11,7 +11,8 @@ import org.koin.java.KoinJavaComponent.getKoin
 class PagingRepo {
 
     private fun getDefaultPageConfig(pageSize:Int): PagingConfig {
-        return PagingConfig(pageSize = pageSize, enablePlaceholders = true)
+        return PagingConfig(pageSize = pageSize, enablePlaceholders = false,prefetchDistance = 5,
+            initialLoadSize = pageSize)
     }
 
     private fun getPagingDataSrc():PagingDataSource = getKoin().get(PagingDataSource::class)
