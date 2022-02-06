@@ -8,14 +8,14 @@ ToDo List App is a kind of app that generally used to maintain our day-to-day ta
 
 ## Features
 
-In this version of the ToDo list, the user will be getting four options:
+In this version of the ToDo list, the user will be getting five options:
 
 
 
 
 - Create (add) a new task or adding a new ToDo in the ToDo List App.
 - See all the tasks or View all the ToDos that were added to the app.
-- Mark any ToDo from the list of ToDos.
+- Mark  the ToDo from the list.
 - Search ToDos by tags (Case sensitive)
 - Grouping tags by it's name
 
