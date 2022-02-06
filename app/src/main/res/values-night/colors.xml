@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="daynight">#121111</color>
+    <color name="icon_tint">#FFFFFF</color>
+    <color name="black_light">#FFFFFF</color>
+</resources>

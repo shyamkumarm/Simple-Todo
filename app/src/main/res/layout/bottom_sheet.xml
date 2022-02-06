@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/daynight"
+    app:behavior_peekHeight="30dp"
+    android:padding="10dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+    <View
+        android:id="@+id/peek"
+        android:layout_width="150dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/task_view"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/peek">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/task_string"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences"
+            android:hint="@string/task_name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="10dp"
+        android:weightSum="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/task_view">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tag_edit"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tag_string"
+                android:inputType="textCapSentences"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/tags" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toEndOf="@+id/tag_edit"
+            tools:listitem="@layout/pirority_spinner_list"
+            android:paddingEnd="27dp"
+            android:paddingRight="20dp"
+            tools:ignore="RtlSymmetry" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".7"
+            android:text="@string/create"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/purple_500"
+            app:layout_constraintStart_toEndOf="@+id/spinner" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
